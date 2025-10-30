@@ -80,9 +80,3 @@ Có thể máy sẽ chạy chậm. Nếu chạy chậm, hãy kiểm tra xem torc
 ```bash
 python -c "import torch; print(torch.cuda.is_available())"
 ```
----
-### 💬 Feedback
-
-Nếu gặp lỗi hoặc muốn đóng góp thêm ý tưởng, hãy liên hệ mình:
-
-📧 hoangtrang555htm@gmail.com
