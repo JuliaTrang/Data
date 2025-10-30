@@ -9,7 +9,7 @@
 ---
 
 ## ⚙️ Implementation Guide
----
+
 ### 🐍 1. Python version
 
 KeyBERT hiện **chưa hỗ trợ Python 3.13**,  
@@ -23,11 +23,10 @@ Khi cài nhớ tick:
 * ✅ *Add Python to PATH*  
 * ✅ *Install for all users*
 
----
 
 ### 🧱 2. Tạo môi trường ảo (virtual environment)
 
-Trong thư mục project (ví dụ `D:\Julia06\CodePrac\Python\Data`), chạy:
+Trong thư mục project (ví dụ `D:\Python\Data`), chạy:
 
 ```bash
 py -3.11 -m venv .venv
@@ -46,7 +45,8 @@ Nếu thấy prompt chuyển thành:
 ```
 
 là đã kích hoạt thành công.
----
+
+
 ### 📦 3. Cài thư viện cần thiết
 
 Sau khi .venv kích hoạt, cài toàn bộ dependencies bằng:
@@ -54,7 +54,7 @@ Sau khi .venv kích hoạt, cài toàn bộ dependencies bằng:
 ```bash
 pip install -r requirements.txt
 ```
----
+
 ### 🚀 4. Chạy demo NLP AI
 
 Chạy demo gợi ý nhà hàng:
