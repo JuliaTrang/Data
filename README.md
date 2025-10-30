@@ -42,7 +42,7 @@ Kích hoạt môi trường ảo:
 Nếu thấy prompt chuyển thành:
 
 ```bash
-(.venv) PS <D:\Data>
+(.venv) PS D:\Data
 ```
 
 là đã kích hoạt thành công.
