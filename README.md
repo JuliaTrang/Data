@@ -1,38 +1,88 @@
-# Demo running NLP AI
+# 🧠 Demo NLP AI — Food & Restaurant Recommendation
 
-## Introduction
-Đây là bản demo chạy NLP AI bằng Python, xử lý input đầu vào bằng keyBERT - trích xuất từ khóa và so sánh với tags được gắn trong database (không hoàn toàn chính xác, data này chỉ là raw phục vụ cho PoC, có thể còn thiếu sót). Output cho ra sẽ là gợi ý các món ăn, nhà hàng.
+## 📌 Introduction
 
-## Implement
-Lưu ý keyBERT hiện tại không hỗ trợ cho phiên bản Python mới nhất Python 3.13. Thế nên để chạy được các file trên, khuyến khích nên cài máy ảo với Python 3.11 và đồng thời cài đặt các libraries cần thiết trong file **requirements.txt**:
-- Cài đặt máy ảo trên VSCode:
-+ Cài đặt Python 3.11: https://www.python.org/downloads/release/python-3119/
-+ Cài đặt máy ảo:
-``bash
-py -3.11 -m venv .venv 
-``
-Rổi kích hoạt:
-``bash
+Đây là **bản demo NLP AI** viết bằng Python, xử lý input đầu vào bằng **KeyBERT** để **trích xuất từ khóa tiếng Việt**, sau đó so sánh với **tags** được gắn trong **database nhà hàng / món ăn**.
+
+> ⚠️ **Lưu ý:** Đây chỉ là **Proof of Concept (PoC)** – data vẫn là **raw**, nên kết quả có thể **chưa hoàn toàn chính xác**.
+
+---
+
+## ⚙️ Implementation Guide
+---
+### 🐍 1. Python version
+
+KeyBERT hiện **chưa hỗ trợ Python 3.13**,  
+nên **bắt buộc** chạy bằng **Python 3.11** để tránh lỗi thư viện.
+
+📥 **Tải Python 3.11:**  
+🔗 [https://www.python.org/downloads/release/python-3119/](https://www.python.org/downloads/release/python-3119/)
+
+Khi cài nhớ tick:
+
+* ✅ *Add Python to PATH*  
+* ✅ *Install for all users*
+
+---
+
+### 🧱 2. Tạo môi trường ảo (virtual environment)
+
+Trong thư mục project (ví dụ `D:\Julia06\CodePrac\Python\Data`), chạy:
+
+```bash
+py -3.11 -m venv .venv
+```
+
+Kích hoạt môi trường ảo:
+
+```bash
 .\.venv\Scripts\Activate.ps1
-``
-Nếu thấy: **(.venv) PS D:\Data>**, là đã thành công.
-Sau đó hãy cài các thư viện cần thiết sau:
-``bash
+```
+
+Nếu thấy prompt chuyển thành:
+
+```bash
+(.venv) PS D:\Data>
+```
+
+là đã kích hoạt thành công.
+---
+### 📦 3. Cài thư viện cần thiết
+
+Sau khi .venv kích hoạt, cài toàn bộ dependencies bằng:
+
+```bash
 pip install -r requirements.txt
-``
-Sau khi cài xong hết, chạy lệnh sau để chạy demo NLP AI:
-*Chạy demo recom nhà hàng:
-``bash
+```
+---
+### 🚀 4. Chạy demo NLP AI
+
+Chạy demo gợi ý nhà hàng:
+
+```bash
 python recomRes.py
-``
-*Chạy demo recom đồ ăn thức uống:
-``bash
+```
+
+Chạy demo gợi ý món ăn / đồ uống:
+
+```bash
 python recomFood.py
-``
+```
+---
+### 🧩 Notes
 
-## Notes
-Bản demo này có thể còn nhiều thiếu sót và có khi có bug, mong mọi người thông cảm và đóng góp ý kiến cho mình nhé!
-Email: hoangtrang555htm@gmail.com
+Vì đây là bản PoC, AI model chỉ ở mức thử nghiệm, nên kết quả còn đơn giản.
 
-## Author
-HoangTrang
+Dữ liệu nhà hàng và món ăn chỉ mang tính minh họa, không phải dữ liệu thật.
+
+Có thể máy sẽ chạy chậm. Nếu chạy chậm, hãy kiểm tra xem torch có dùng GPU chưa:
+
+```bash
+python -c "import torch; print(torch.cuda.is_available())"
+```
+---
+### 💬 Feedback
+
+Nếu gặp lỗi hoặc muốn đóng góp thêm ý tưởng, hãy liên hệ mình:
+
+📧 hoangtrang555htm@gmail.com
